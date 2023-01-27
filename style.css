@@ -8,35 +8,46 @@ body {
     display: grid;
     place-items: center;
   }
-  
+  .showoff-groups,
   .showoff-group,
   .card{
     aspect-ratio:7/10;
   }
   
+  .showoff-groups
   .showoff-group,
   .card{
     width:50vmin;
+  }
+  
+  .showoff-group{
+  position:absolute;
   }
   .card{
     background-color:white;
     position: absolute;
     border-radius:5vmin; 
+    transition: transform 800ms cubic-bezier(.11,.75,.19,.87);
   }
+  
   .so-card:nth-child(1){
-    background-image: url("https://unsplash.com/photos/kcA-c3f_3FE");
+    background-image: url(https://images.unsplash.com/photo-1626082896492-766af4eb6501?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZnJpZWQlMjBjaGlja2VufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
     transform: translateX(-50%) rotate(5deg);
   }
   .so-card:nth-child(2){
+      background-image: url(https://images.unsplash.com/photo-1626082896492-766af4eb6501?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZnJpZWQlMjBjaGlja2VufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
     transform: translateX(-30%) rotate(7deg);
   }
   .so-card:nth-child(3){
+      background-image: url(https://images.unsplash.com/photo-1626082896492-766af4eb6501?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZnJpZWQlMjBjaGlja2VufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
     transform: translateX(-10%) rotate(9deg);
   }
   .so-card:nth-child(4){
+      background-image: url(https://images.unsplash.com/photo-1626082896492-766af4eb6501?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZnJpZWQlMjBjaGlja2VufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
     transform: translateX(0%) rotate(11deg);
   }
   .so-card:nth-child(5){
+      background-image: url(https://images.unsplash.com/photo-1626082896492-766af4eb6501?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZnJpZWQlMjBjaGlja2VufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
     transform: translateX(10%) rotate(13deg);
   }
   
@@ -54,6 +65,29 @@ body {
   }.showoff-group:hover > .so-card:nth-child(5){
     transform: translateX(150%) rotate(9deg);
   }
+  .swipe-buttons{
+    margin-top:80vmin;
+  }
+  .swipe-buttons > button{
+    font-size: 2.5vmin;
+    border: 0.4vmin;
+    color:white;
+    border-radius:100;
+    background-color:transparent;
+    cursor:pointer;
+  }
+  .showoff-group[data-status="unknown"]{
+    transform:scale(0);
+  }
   
+  .showoff-group[data-status="after"]{
+  transform:translateX(50%)scale(0);
+  }
   
-  
+  .showoff-group{
+    position:absolute;
+    transition: transform 400ms ease;
+  }
+  .showoff-group[data-status="before"]{
+  transform:translateX(-50%)scale(0);
+  }

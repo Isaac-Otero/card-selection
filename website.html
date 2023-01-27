@@ -1,19 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Website</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <h1>Welcome to where design and code intersects</h1>
 <h2>by Isaac Otero</h2>
-<body>
-<div class="showoff-group">
-  <div class="so-card card">
+<body
+<div class="card-swipe">
+  <div class="showoff-groups" >
+    <div class="showoff-group" data-index="0" data-status="active">
+    <div class="so-card card">
+    </div>
+    <div class="so-card card">
+    </div>
+    <div class="so-card card">
+    </div>
+    <div class="so-card card">
+    </div>
+    <div class="so-card card">
+    </div>
   </div>
-  <div class="so-card card">
+    <div class="showoff-group" data-index="1" data-status="unknown">
+    <div class="so-card card">
+    </div>
+    <div class="so-card card">
+    </div>
+    <div class="so-card card">
+    </div>
+    <div class="so-card card">
+    </div>
+    <div class="so-card card">
+    </div>
   </div>
-  <div class="so-card card">
+    <div class="showoff-group" data-index="2" data-status="unknown">
+    <div class="so-card card">
+    </div>
+    <div class="so-card card">
+    </div>
+    <div class="so-card card">
+    </div>
+    <div class="so-card card">
+    </div>
+    <div class="so-card card">
+    </div>
   </div>
-  <div class="so-card card">
   </div>
-  <div class="so-card card">
+  <div class="swipe-buttons">
+    <button id='no-button'>
+      <i class="fa fa-thumbs-down" style="font-size:48px" onclick="handleNo()"> 
+      </i>
+    </button>
+    
+    <button id="yes-button">
+      <i class="fa fa-thumbs-up" style="font-size:48px;color:blue" onclick="handleYes()" >            
+      </i>  
+    </button>
   </div>
 </div>
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
 </body>
 </html>
